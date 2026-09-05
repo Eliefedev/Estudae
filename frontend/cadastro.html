@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Estudaê</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle page-theme-toggle" type="button" data-theme-toggle aria-label="Ativar modo escuro"><span aria-hidden="true">☾</span><span data-theme-label>Modo escuro</span></button>
+        <div class="card form-card">
+            <h2>Criar conta</h2>
+            <form id="cadastroForm">
+                <label>
+                    Nome
+                    <input type="text" id="name" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" id="email" required />
+                </label>
+                <label>
+                    Senha
+                    <input type="password" id="password" required />
+                </label>
+                <button type="submit" class="btn primary">Cadastrar</button>
+            </form>
+            <p class="link-text">Já possui conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

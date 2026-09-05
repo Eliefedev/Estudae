@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Estudaê</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle page-theme-toggle" type="button" data-theme-toggle aria-label="Ativar modo escuro"><span aria-hidden="true">☾</span><span data-theme-label>Modo escuro</span></button>
+        <div class="card form-card">
+            <h2>Entrar no Estudaê</h2>
+            <form id="loginForm">
+                <label>
+                    Email
+                    <input type="email" id="email" required />
+                </label>
+                <label>
+                    Senha
+                    <input type="password" id="password" required />
+                </label>
+                <button type="submit" class="btn primary">Entrar</button>
+            </form>
+            <p class="link-text">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

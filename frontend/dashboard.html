@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Estudaê</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar">
+            <h2>Estudaê</h2>
+            <nav>
+                <a href="#">Dashboard</a>
+                <button id="logoutBtn" class="btn secondary">Sair</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="topbar">
+                <h3>Dashboard</h3>
+                <div class="topbar-actions">
+                    <span id="userGreeting">Olá!</span>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Ativar modo escuro"><span aria-hidden="true">☾</span><span data-theme-label>Modo escuro</span></button>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span>Total</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Pendentes</span>
+                    <strong id="pendingTasks">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Concluídas</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Próximas</span>
+                    <strong id="nearDeadline">0</strong>
+                </div>
+            </section>
+
+            <section class="task-panel">
+                <h3 id="formTitle">Nova tarefa</h3>
+                <form id="taskForm" class="task-form">
+                    <input type="text" id="taskTitle" placeholder="Título" required />
+                    <textarea id="taskDescription" placeholder="Descrição"></textarea>
+                    <select id="taskCategory" required>
+                        <option value="TRABALHO">Trabalho</option>
+                        <option value="PROVA">Prova</option>
+                        <option value="PROJETO">Projeto</option>
+                        <option value="ESTUDO">Estudo</option>
+                    </select>
+                    <input type="date" id="taskDueDate" required />
+                    <button type="submit" class="btn primary" id="submitTaskBtn">Adicionar</button>
+                    <button type="button" class="btn secondary hidden" id="cancelEditBtn">Cancelar</button>
+                </form>
+            </section>
+
+            <section class="task-panel">
+                <div class="panel-header">
+                    <h3>Minhas tarefas</h3>
+                    <div class="filters">
+                        <select id="filterStatus">
+                            <option value="all">Todas</option>
+                            <option value="pending">Pendentes</option>
+                            <option value="completed">Concluídas</option>
+                        </select>
+                        <select id="filterCategory">
+                            <option value="all">Todas as categorias</option>
+                            <option value="TRABALHO">Trabalho</option>
+                            <option value="PROVA">Prova</option>
+                            <option value="PROJETO">Projeto</option>
+                            <option value="ESTUDO">Estudo</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="tasksContainer" class="tasks-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
